@@ -15,9 +15,9 @@ public class Main2Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
         final VideoView videoView = findViewById(R.id.video);
-        Uri videoUri =
-                Uri.parse("android.resource://" + getPackageName() + "/" + R.raw.video);
-        videoView.setVideoURI(videoUri);
+        String videoUrl="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4";
+        Uri video = Uri.parse(videoUrl);
+        videoView.setVideoURI(video);
         videoView.requestFocus();
         mediaController = new MediaController(Main2Activity.this);
         videoView.setMediaController(mediaController);
